@@ -19,6 +19,7 @@ To convert RAFT from ONNX to run with OpenCV DNN, the GatherElements operator ha
 Simultaneous to implementing and testing the GatherElements operator, a [third pull request](https://github.com/opencv/opencv_zoo/pull/197) was submitted to opencv_zoo to add the RAFT model along with a demo and example for inputs and outputs using the ONNX version of the RAFT model.
 ### Phase 4: Loading the RAFT model with the OpenCV DNN
 After the GatherElements operator passed the tests, the [pull request to opencv_zoo](https://github.com/opencv/opencv_zoo/pull/197) was updated to run the demos for the RAFT model with OpenCV DNN instead of ONNX. In addition, I solved the twinkling issue of the visualization module. An example of the updated output:
+<p align="center"> <img src="https://github.com/Aser-Abdelfatah/Google_Summer_of_Code_2023_OpenCV_Optical_Flow_Summary/assets/47282229/51ee3612-c478-45fe-a398-7b2036f37f4d" />
 
 ### Phase 5: Testing the RAFT model with OpenCV DNN
  Finally, the [initial OpenCV pull request of the GatherElements implmentation](https://github.com/opencv/opencv/pull/24092) was updated to test the RAFT model loaded with OpenCV DNN. And the [second OpenCV_extra pull request](https://github.com/opencv/opencv_extra/pull/1082) was updated to add the data needed for testing the RAFT model. 
