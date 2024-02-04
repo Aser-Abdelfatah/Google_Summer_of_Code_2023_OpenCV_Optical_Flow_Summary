@@ -17,10 +17,11 @@ Using KITTI Vision Benchmark Suite, I shortlisted three models based on their ac
 To convert RAFT from ONNX to run with OpenCV DNN, the GatherElements operator had to be added to the OpenCV DNN module. The first [pull request](https://github.com/opencv/opencv/pull/24092) to OpenCV was implementing the operator in the OpenCV DNN module. Then, a [second pull request](https://github.com/opencv/opencv_extra/pull/1082) was made to OpenCV_extra to test and validate the implementation of GatherElements. 
 ### Phase 3: Introducing a demo for the RAFT model to OpenCV Model Zoo using ONNX
 Simultaneous to implementing and testing the GatherElements operator, a [third pull request](https://github.com/opencv/opencv_zoo/pull/197) was submitted to opencv_zoo to add the RAFT model along with a demo and example for inputs and outputs using the ONNX version of the RAFT model.
-### Phase 4: Loading RAFT with the OpenCV DNN
+### Phase 4: Loading the RAFT model with the OpenCV DNN
 After the GatherElements operator passed the tests, the [pull request to opencv_zoo](https://github.com/opencv/opencv_zoo/pull/197) was updated to run the demos for the RAFT model with OpenCV DNN instead of ONNX. In addition, I solved the twinkling issue of the visualization module. An example of the updated output:
 
- Afterwards, the [initial OpenCV pull request of the GatherElements implmentation](https://github.com/opencv/opencv/pull/24092) was updated to test the RAFT model. And the [second OpenCV_extra pull request](https://github.com/opencv/opencv_extra/pull/1082) was updated to add the data needed for testing the RAFT model. 
+### Phase 5: Testing the RAFT model with OpenCV DNN
+ Finally, the [initial OpenCV pull request of the GatherElements implmentation](https://github.com/opencv/opencv/pull/24092) was updated to test the RAFT model loaded with OpenCV DNN. And the [second OpenCV_extra pull request](https://github.com/opencv/opencv_extra/pull/1082) was updated to add the data needed for testing the RAFT model. 
 
 
 [^1]: Fl-All refers to the percentage of pixels with endPoint Error over the complete frames (EPE) more than 3 pixels or larger than 5% of the ground truth.
